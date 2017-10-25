@@ -1,0 +1,114 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
+  <rdf:Description rdf:about="http://description/Alunos/Thiago">
+    <vcard:UID>2013785265</vcard:UID>
+    <vcard:EMAIL>Thiago@ufrrj.com.br</vcard:EMAIL>
+    <vcard:NAME>THIAGO DA COSTA PINTO FRAZÃƒO DE SOUSA</vcard:NAME>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://description/Alunos/Fellipe">
+    <vcard:UID>2013785060</vcard:UID>
+    <vcard:EMAIL>Fellipe@ufrrj.com.br</vcard:EMAIL>
+    <vcard:NAME>FELLIPE BRAVO RIBEIRO PIMENTEL</vcard:NAME>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://description/Alunos/Diana">
+    <vcard:UID>2011785081</vcard:UID>
+    <vcard:EMAIL>Diana@ufrrj.com.br</vcard:EMAIL>
+    <vcard:NAME>DIANA SOARES DE ANDRADE</vcard:NAME>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://description/Alunos/Jackson">
+    <vcard:UID>2012780103</vcard:UID>
+    <vcard:EMAIL>Jackson@ufrrj.com.br</vcard:EMAIL>
+    <vcard:NAME>JACKSON CARDOSO DE OLIVEIRA</vcard:NAME>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://description/Alunos/Aline">
+    <vcard:UID>2011715030</vcard:UID>
+    <vcard:EMAIL>Aline@ufrrj.com.br</vcard:EMAIL>
+    <vcard:NAME>ALINE LIMA DE SOUZA</vcard:NAME>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://description/Alunos/Diego">
+    <vcard:UID>2013780069</vcard:UID>
+    <vcard:EMAIL>Diego@ufrrj.com.br</vcard:EMAIL>
+    <vcard:NAME>DIEGO AMARO FERRAZ DA COSTA</vcard:NAME>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://description/Alunos/Luis">
+    <vcard:UID>2011780282</vcard:UID>
+    <vcard:EMAIL>Luis@ufrrj.com.br</vcard:EMAIL>
+    <vcard:NAME>LUIS PAULO DA COSTA CAVALCANTE</vcard:NAME>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://description/Alunos/Bianca">
+    <vcard:UID>2013785036</vcard:UID>
+    <vcard:EMAIL>Bianca@ufrrj.com.br</vcard:EMAIL>
+    <vcard:NAME>BIANCA ALBUQUERQUE MACHADO</vcard:NAME>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://description/Alunos/Gabriel">
+    <vcard:UID>2013785079</vcard:UID>
+    <vcard:EMAIL>Gabriel@ufrrj.com.br</vcard:EMAIL>
+    <vcard:NAME>GABRIEL DE OLIVEIRA SEGOBIA</vcard:NAME>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://description/Alunos/William">
+    <vcard:UID>2012780332</vcard:UID>
+    <vcard:EMAIL>William@ufrrj.com.br</vcard:EMAIL>
+    <vcard:NAME>WILLIAM MESSIAS DA COSTA</vcard:NAME>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://description/Alunos/Douglas">
+    <vcard:UID>2013780077</vcard:UID>
+    <vcard:EMAIL>Douglas@ufrrj.com.br</vcard:EMAIL>
+    <vcard:NAME>DOUGLAS CASTRO DA SILVA</vcard:NAME>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://description/Alunos/Lucas">
+    <vcard:UID>2015780473</vcard:UID>
+    <vcard:EMAIL>Lucas@ufrrj.com.br</vcard:EMAIL>
+    <vcard:NAME>LUCAS SOARES DE BARROS VILLARINHO</vcard:NAME>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://description/Alunos/Nelson">
+    <vcard:UID>2015780317</vcard:UID>
+    <vcard:EMAIL>Nelson@ufrrj.com.br</vcard:EMAIL>
+    <vcard:NAME>NELSON ANTUNES LARANJEIRA NETO</vcard:NAME>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://description/Alunos/Francisco">
+    <vcard:UID>2012780138</vcard:UID>
+    <vcard:EMAIL>Francisco@ufrrj.com.br</vcard:EMAIL>
+    <vcard:NAME>FRANCISCO SANCAS JUNIOR</vcard:NAME>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://description/Alunos/Paulo">
+    <vcard:UID>2013785184</vcard:UID>
+    <vcard:EMAIL>Paulo@ufrrj.com.br</vcard:EMAIL>
+    <vcard:NAME>PAULO ROBERTO XAVIER JUNIOR</vcard:NAME>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://description/Alunos/Renan">
+    <vcard:UID>2013780263</vcard:UID>
+    <vcard:EMAIL>Renan@ufrrj.com.br</vcard:EMAIL>
+    <vcard:NAME>RENAN PROCOPIO DUARTE</vcard:NAME>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://description/Alunos/Artur">
+    <vcard:UID>2013780034</vcard:UID>
+    <vcard:EMAIL>Artur@ufrrj.com.br</vcard:EMAIL>
+    <vcard:NAME>ARTUR ALVES SOUZA SILVA</vcard:NAME>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://description/Alunos/Denilson">
+    <vcard:UID>2013785052</vcard:UID>
+    <vcard:EMAIL>Denilson@ufrrj.com.br</vcard:EMAIL>
+    <vcard:NAME>DENILSON DE ARAUJO PIRES FERREIRA</vcard:NAME>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://description/Alunos/Leonardo">
+    <vcard:UID>2015780589</vcard:UID>
+    <vcard:EMAIL>Leonardo@ufrrj.com.br</vcard:EMAIL>
+    <vcard:NAME>LEONARDO ALMEIDA DA SILVA</vcard:NAME>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://description/Alunos/Valber">
+    <vcard:UID>2011780223</vcard:UID>
+    <vcard:EMAIL>Valber@ufrrj.com.br</vcard:EMAIL>
+    <vcard:NAME>VALBER OSCAR LAUX</vcard:NAME>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://description/Alunos/Racicley">
+    <vcard:UID>2011785233</vcard:UID>
+    <vcard:EMAIL>Racicley@ufrrj.com.br</vcard:EMAIL>
+    <vcard:NAME>RACICLEY COSTA CONCEICAO PEDRO</vcard:NAME>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://description/Alunos/Mayara">
+    <vcard:UID>2012785164</vcard:UID>
+    <vcard:EMAIL>Mayara@ufrrj.com.br</vcard:EMAIL>
+    <vcard:NAME>MAYARA MARQUES DA ROSA</vcard:NAME>
+  </rdf:Description>
+</rdf:RDF>

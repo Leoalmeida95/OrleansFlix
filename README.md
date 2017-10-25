@@ -3,17 +3,17 @@ Sistema de consultas SPARQL em arquivos RDF, com Apache Jena.
 
 ![20216295_1388848134555598_1396057235_o](https://user-images.githubusercontent.com/25140680/31975523-8612a3a2-b910-11e7-8c0b-02f259366c30.png)
 
-1 Descrição do Trabalho
+#####1 Descrição do Trabalho
 
 Tudo o que será visto neste documento são as etapas que compõem o trabalho.
 
 Dados fornecidos:
 
---films.txt - Arquivo contendo informações que representam diversos flmes.
+* films.txt - Arquivo contendo informações que representam diversos flmes.
 
---actors.txt - Arquivo contento informações que representam diversos atores.
+* actors.txt - Arquivo contento informações que representam diversos atores.
 
---film_actor.txt - Uma associação entre atores e filmes, de onde se pode extrair quais atores
+* film_actor.txt - Uma associação entre atores e filmes, de onde se pode extrair quais atores
 trabalharam em quais filmes.
 
 
@@ -26,20 +26,20 @@ seus detalhes.
 
 O desenvolvimento do projeto foi dividido em três etapas:
 
--- Conversão dos .txt para RDF.
+* Conversão dos .txt para RDF.
 
--- Criação das querys SPARQL.
+* Criação das querys SPARQL.
 
--- Desenvolvimento dos Sistemas Web.
+* Desenvolvimento dos Sistemas Web.
 
 
-2 Conversão para RDF
+#####2 Conversão para RDF
 
 Para poder ser capaz de trocar informações entre dois sistemas diferentes, é necessário que esses
 sistemas entendam os dados no mesmo formato. Para isso é necessário utilizar o RDF.
 
 
-2.1 RDF
+#####2.1 RDF
 
 RDF, acrônimo para Resource Description Framework, é um modelo padrão para o intercâmbio
 de dados na web. RDF tem caracteristicas que facilitam a mesclagem de dados mesmo se os
@@ -47,7 +47,7 @@ esquemas subjacentes sejam diferentes. O RDF mais especícamente suporta a evolu
 esquemas ao longo do tempo sem que os consumidores de dados tenham que ser modificados.
 
 
-2.2 Os arquivos de dados
+#####2.2 Os arquivos de dados
 
 Como entrada de dados ainda não convertidos para RDF, temos os arquivos de texto films.txt,
 actors.txt. Cada um desses arquivos tem uma representação para diferentes dados sobre atores
@@ -57,7 +57,7 @@ em arquivo são similares: As informações sãp separadas por pipes ('|'), e um
 termina com um caractere de fim de linha ('\n').
 
 
-2.3 Apache Jena
+#####2.3 Apache Jena
 
 Apache Jena foi uma das ferramentas utilizadas no desenvolvimento do projeto. Jena é um
 framework open source de Web Semântica para Java. Fornece uma API para extrair dados de
@@ -66,7 +66,7 @@ modelo pode ser suprido com dados de arquivos, bancos de dados, URLs ou uma comb
 destes. Um modelo também pode ser utilizado por queries SPARQL.
 
 
-2.4 Conversão
+#####2.4 Conversão
 
 
 Primeiramente, para representar os dados dos arquivos no ambiente Java, foi criada uma classe
@@ -77,6 +77,7 @@ utilizando métodos da API Jena. Esta classe abre os arquivos de texto em modo d
 e cria listas de Atores, Filmes e Atores Filmes. Cada uma das listas terá todos os registros dentro
 dos arquivos (fragmentos de código abaixo):
 
+```{.java results="none"}
 1 public static ArrayList <Ator> Atores_ToList ( RandomAccessFile file ) throws IOException
   
 {
@@ -136,12 +137,12 @@ dos arquivos (fragmentos de código abaixo):
 28 return atores ;
 
 29 }
-
+```
 
 
 O algoritmo acima lê todos os registros de actors.txt e os armazena em um ArrayList, para então
 poder ser convertido para RDF utilizando os métodos do Apache Jena no algoritmo abaixo:
-
+```{.java results="none"}
 1 public static void Atores_ToRdf ( ArrayList <Ator > lista ) throws IOException {
   
 2 Model m = ModelFactory . createDefaultModel ();
@@ -181,26 +182,26 @@ poder ser convertido para RDF utilizando os métodos do Apache Jena no algoritmo
 19 m. write (out , " RDF /XML - ABBREV ");
 
 20 }
-  
+ ``` 
   
 Após este último passo, o arquivo em RDF com as informações de actors.txt estará pronto. Vale
 ressaltar que todo este processo se aplica de forma similar aos arquivos films.txt e film_actor.txt.
 
 
-2.5 Ontologia por Vocabulário
+#####2.5 Ontologia por Vocabulário
 
 Como pode ser visto no algoritmo de conversão para RDF, todas as Resources e Properties
 compartilham do mesmo prefíxo NS (namespace), possibilitando que os sistemas saibam que
 estão "falando a mesma lingua" e, consequentemente, proporcionando uma Ontologia por Vocabulário entre os sistemas que utilizam esses RDFs.
 
 
-3 Consultas com SPARQL
+#####3 Consultas com SPARQL
 
 O método doGet é chamado quando se aperta o botão da consulta em umas das páginas.
 Esse método abre os arquivos RDFs que foram gerados, recebe o 'nome' que está sendo passado
 para a consulta, e executa as queries, gerando uma lista no final.
 
-
+```{.java results="none"}
 1 public void doGet ( HttpServletRequest request , HttpServletResponse response ) throwsIOException , ServletException
 
 2 {
@@ -238,7 +239,7 @@ para a consulta, e executa as queries, gerando uma lista no final.
 18 GeraSaida (out , result , nomeBuscado );
 
 19 }
-
+ ``` 
 
 A seguir teremos de exemplo a busca dos atores de um filme.
 
@@ -248,7 +249,7 @@ o nome do filme que está sendo pesquisado. Cria-se uma query onde se seleciona 
 igual ao nome do filme passado como parâmetro para esse metodo. A query é executada e retorna
 o Id do filme.
 
-
+```{.java results="none"}
 1 public static String GetIdByNome ( Model m, String s)
 
 2 {
@@ -294,7 +295,7 @@ o Id do filme.
 22
 
 23 }
-
+ ``` 
 
 Posteriormente, esse Id é passado para o método GetAtoresDeUmFilme, que recebe os RDFs
 'film_actor', que representa a relação dos filmes e atores, e 'actors', além do Id do filme. Primeiro,
@@ -310,7 +311,7 @@ o '?id' que é o 'j.0:Actor_id', for igual ao id do laço.
 
 No final, teremos a lista de nomes dos atores.
 
-
+```{.java results="none"}
 1 public static List <String > GetAtoresDeUmFilme ( Model film_actor , Model actors , String FilmeId )
   
 2 {
@@ -398,9 +399,9 @@ No final, teremos a lista de nomes dos atores.
 43 return atoresNomes ;
 
 44 }
+``` 
   
-  
-4 Funcionamento dos Sistemas Web
+#####4 Funcionamento dos Sistemas Web
 
 Para realizar as consultas definidas pelo SPARQL no passo anterior, foram criadas duas páginas
 HTML distintas que utilizam os arquivos RDF criados anteriormente para manterem uma forma

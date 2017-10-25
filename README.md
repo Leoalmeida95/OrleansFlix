@@ -1,6 +1,8 @@
 # OrleansFlix_TEBD
 Sistema de consultas SPARQL em arquivos RDF, com Apache Jena.
 
+https://user-images.githubusercontent.com/25140680/31975523-8612a3a2-b910-11e7-8c0b-02f259366c30.png
+
 1 Descrição do Trabalho
 
 Tudo o que será visto neste documento são as etapas que compõem o trabalho.
@@ -406,3 +408,26 @@ de comunicação comum entre si. Ou seja, na página de busca por filme, o nome 
 é passado como o nome a ser buscado e uma lista de atores que participaram desse filme é
 retornada, pois o SPARQL pode fazer uma consulta que a outra página entende. A recíproca é
 válida para a outra página.
+
+Observe abaixo uma demonstração do funcioanamento do projeto:
+
+https://user-images.githubusercontent.com/25140680/31975524-872f4c54-b910-11e7-85a3-d5dec0163b18.png
+
+Figura 1: Buscando atores através de um filme
+
+https://user-images.githubusercontent.com/25140680/31975528-8934aec2-b910-11e7-8d37-1a6945aa24e9.png
+
+Figura 2: Atores encontrados
+
+E o oposto pode ser feito no outro site:
+
+https://user-images.githubusercontent.com/25140680/31975523-8612a3a2-b910-11e7-8c0b-02f259366c30.png
+
+Figura 3: Buscando filmes através de um ator/atriz
+
+https://user-images.githubusercontent.com/25140680/31975526-88579eba-b910-11e7-9e19-471a8694eb71.png
+
+Figura 4: Filmes encontrados
+
+
+
